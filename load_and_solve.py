@@ -115,6 +115,7 @@ def implicit_solver(i,j,container):
         if len(set(poss_vals)-set(row_poss)) == 1:
             container[i][j] = list(set(poss_vals)-set(row_poss))[0]
             #print_container(container)
+            return container
         
         #check column
         col_poss = []
@@ -127,6 +128,7 @@ def implicit_solver(i,j,container):
         if len(set(poss_vals)-set(col_poss)) == 1:
             container[i][j] = list(set(poss_vals)-set(col_poss))[0]
             #print_container(container)
+            return container
                 
         #check square
         first = [0,1,2]
